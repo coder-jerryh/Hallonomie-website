@@ -1,0 +1,515 @@
+/* 字体 */
+@font-face {
+  font-family: OpenSans;
+  src: url("./font/OpenSans-CondensedBold.ttf");
+}
+/* reset样式 */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+li{
+  list-style: none;
+}
+i{
+  font-style: normal;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+.homePage {
+  font-family: OpenSans;
+  background: #f6f6f6;
+  padding-top: 82px;
+}
+/* 导航 */
+.homePage header {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 82px;
+  background: #003957;
+  padding: 0 22px 0 32px;
+  display: flex;
+  align-items: flex-end;
+  color: #FFD76F;
+}
+.homePage header .logoName {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 130px;
+  padding-bottom: 18px;
+  cursor: pointer;
+}
+.homePage header .logoName:hover {
+  opacity: 0.85;
+}
+.homePage header .logoName img {
+  width: 28px;
+  height: 47px;
+  margin-right: 8px;
+}
+.homePage header .logoName h1 {
+  position: relative;
+  top: 5px;
+  font-size: 18px;
+}
+.homePage header>ul {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  font-size: 16px;
+}
+.homePage header>ul>li> a{
+  padding: 0 24px;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 14px;
+  color: #FFD76F;
+}
+.homePage header>ul>li:hover>a {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+.selected{
+  text-decoration: underline;
+}
+.homePage header>a {
+  color: #FFD76F;
+  font-size: 16px;
+  padding-bottom: 14px;
+}
+.homePage header a:hover {
+  opacity: 0.85;
+}
+/* 详情页 */
+.homePage .detail{
+  font-weight: 600;
+  font-family: sans-serif;
+  white-space: pre-wrap;
+  background: #003957;
+  color: #FFD76F;
+  font-size: 16px;
+  padding-bottom: 50px;
+  cursor: default;
+}
+.homePage .detail a{
+  color: #FFD76F;
+}
+/* .homePage header ul li:hover .detail{
+  display: inline-block;
+  animation: fadeIn .3s ease-in-out;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+} */
+.homePage .detail article{
+  white-space: pre-wrap;
+  margin-left: -10.5px;
+}
+.homePage .detail.normalText{
+  white-space: normal;
+  padding-bottom: 100px;
+}
+.homePage .detail .videos{
+  word-spacing: normal;
+  display: flex;
+  padding: 0 32px;
+  margin-top: 60px;
+}
+.homePage .detail .videos li{
+  font-size: 16px;
+  flex: 1;
+}
+.homePage .detail .videos li img{
+  width: 100%;
+}
+.homePage .detail .videos li{
+  cursor: pointer;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  height: 380px;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  transition: box-shadow ease .25s;
+}
+.homePage .detail .videos li:hover{
+  box-shadow: 0 0 12px 6px rgba(0,0,0,.3);
+}
+.homePage .detail .videos li:first-child{
+  background-image: url('./bg/qrCode.png');
+}
+.homePage .detail .videos li:last-child{
+  background-image: url('./bg/takeaway.png');
+}
+.homePage .detail .videos li:first-child{
+  margin-right: 36px;
+}
+.homePage .detail .videos li .mask{
+  display: inline-block;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.homePage .detail .videos li p{
+  border-radius: 0 0 4px 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  font-size: 18px;
+  color: #003957;
+  line-height: 40px;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, .5);
+}
+.homePage .detail .videos li img{
+  position: absolute;
+  width: 96px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.homePage .detail .prices {
+  display: flex;
+  padding: 0 32px;
+}
+.homePage .detail .prices >li{
+  height:650px;
+  background:rgba(255,255,255,0.82);
+  border-radius:8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 38px 0;
+  font-size: 16px;
+  color: #003957;
+  flex: 1;
+}
+.homePage .detail .prices >li:first-child{
+  flex: 1.6;
+}
+.homePage .detail .prices >li:nth-child(2){
+  margin: 0 78px;
+}
+.homePage .detail .prices >li>span{
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 18px;
+}
+.homePage .detail .prices >li>i{
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 35px;
+}
+.homePage .detail .prices .tips span{
+  font-weight: 600;
+  text-decoration: line-through;
+  padding: 0 20px;
+}
+.homePage .detail .prices .tips .sale{
+  display: inline-block;
+  width:160px;
+  text-align: center;
+  height:40px;
+  line-height: 40px;
+  background:rgba(247,82,82,1);
+  border-radius:20px;
+  font-weight:600;
+  color:#fff;
+}
+.homePage .detail .prices >li>.total{
+  margin-top: 24px;
+  font-size: 36px;
+}
+.homePage .detail .prices >li>.total>i{
+  font-size: 16px;
+}
+.homePage .detail .prices >li:not(:first-child) .total{
+  margin-top: 50px;
+}
+/* banner */
+.homePage .banner {
+  width: 100%;
+  height: 738px;
+  background-image: url("./bg/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.homePage .banner .info {
+  padding: 60px 65px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 32px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 8px;
+  display: flex;
+}
+.homePage .banner .info article {
+  margin-right: 86px;
+  color: #003957;
+  width: 356px;
+}
+.homePage .banner .info article h3 {
+  font-size: 55px;
+  margin-bottom: 30px;
+}
+.homePage .banner .info article p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.homePage .banner .info article p:first-of-type {
+  margin-bottom: 20px;
+}
+.homePage .banner .info .videos li{
+  position: relative;
+  width: 220px;
+  height: 125px;
+  background-size: 100% 100%;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+  transition: box-shadow ease .25s;
+}
+.homePage .banner .info .videos li:hover{
+  box-shadow: 0 0 12px 6px rgba(0,0,0,.3);
+}
+.homePage .banner .info .videos li p{
+  border-radius: 0 0 4px 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  font-size: 12px;
+  color: #003957;
+  line-height: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, .5);
+}
+.homePage .banner .info .videos li .mask{
+  display: inline-block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.homePage .banner .info .videos li:first-child{
+  background-image: url('./bg/qrCode.png');
+  margin-bottom: 46px;
+}
+.homePage .banner .info .videos li:last-child{
+  background-image: url('./bg/takeaway.png');
+}
+.homePage .banner .info .videos li img {
+  position: absolute;
+  width: 48px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+/* 介绍 */
+.homePage .introduce {
+  background: #fff;
+  margin-top: 25px;
+  padding: 40px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homePage #produkte{
+  display: block;
+  padding-top: 82px;
+  margin-top: -82px;
+  /* padding-top:82px;
+  margin-top:-82px; */
+}
+.homePage .introduce.column {
+  flex-direction: column;
+  text-align: center;
+}
+.homePage .introduce.column h4 {
+  margin-top: 20px;
+}
+.homePage .introduce article {
+  margin: 0 10px;
+  color: #000;
+  position: relative;
+  z-index: 1;
+}
+.homePage .introduce article h4 {
+  font-size: 36px;
+}
+.homePage .introduce article h5 {
+  font-size: 24px;
+}
+.homePage .introduce article p {
+  margin-top: 20px;
+  color: #888B8D;
+  font-size: 16px;
+  width: 424px;
+}
+.homePage .introduce .pics {
+  margin: 0 10px;
+}
+.homePage .introduce .pics img{
+  width: 900px;
+}
+.homePage .brands {
+  margin-top: 25px;
+  padding: 40px 60px;
+  background: #fff;
+}
+.homePage .brands span {
+  font-size: 36px;
+  color: #000;
+  margin-left: 100px;
+}
+.homePage .brands img {
+  margin-top: 30px;
+  width: 100%;
+}
+/* .homePage .brands ul {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.homePage .brands ul li {
+  width: calc(100% / 8 - 40px);
+  margin: 0 20px 20px;
+}
+.homePage .brands ul li img {
+  width: 100%;
+} */
+/* footer */
+.homePage footer {
+  padding: 34px 178px 65px 178px;
+}
+.homePage footer .top {
+  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #D7D7D7;
+}
+.homePage footer .top span {
+  color: #888B8D;
+  font-size: 16px;
+  margin-right: 20px;
+}
+.homePage footer .top img {
+  color: #848484;
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 2px;
+}
+.homePage footer .top img:hover {
+  opacity: .7;
+}
+.homePage footer .top img.youtube {
+  width: 18px;
+  height: 14px;
+}
+.homePage footer .bottom {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #545454;
+}
+.homePage footer .bottom > span:first-of-type {
+  font-weight: 400;
+}
+.homePage footer .bottom > a {
+  margin-right: 60px;
+  cursor: pointer;
+  color: #545454;
+}
+.homePage footer .bottom > a:hover {
+  opacity: .7;
+}
+.homePage footer .bottom .language {
+  cursor: pointer;
+  margin-left: auto;
+}
+.homePage footer .bottom .language:hover {
+  opacity: .7;
+}
+.homePage footer .bottom .language span {
+  margin-right: 10px;
+}
+.homePage footer .bottom .language p img {
+  width: 18px;
+}
+/* iframe */
+.homePage .iframe{
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity ease .3s;
+}
+.homePage iframe{
+  background: #000;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 24px 14px rgba(0,0,0,.5);
+  border-radius: 4px;
+}
+.homePage .iframe .wrap{
+  position: relative;
+  width: 75%;
+  height: 75%;
+}
+.homePage .iframe .close{
+  position: absolute;
+  top: 10px;
+  right: -40px;
+  width: 25px;
+  cursor: pointer;
+}
+.homePage .iframe .close:hover{
+  opacity: .5;
+}

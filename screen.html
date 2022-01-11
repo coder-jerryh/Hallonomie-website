@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/screen.css">
+  <title>Hallonomie</title>
+  <link rel="icon" href="./static/images/logo-mini.png" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="myApp">
+    <main class="homePage">
+      <!-- 导航 -->
+      <header>
+        <a class="logoName">
+          <img src="./static/images/logo.png" alt="">
+          <h1>Hallonomie</h1>
+        </a>
+      </header>
+      <ul v-if='show' class="lists">
+        <li v-for='(item, index) in lists' :key='index'>
+          <h1>{{language === 'zh' ? item.title : item.titleDe}}</h1>
+          <transition-group tag='div' name="list" class="nums">
+            <span class="list" v-for='(num, i) in item.nums' :key='num'>{{num}}</span>
+          </transition-group>
+          <img
+            class="noData"
+            :class='{showNodata: !item.nums.length && loadingSuccess}'
+            src="./static/images/no.png" alt="">
+        </li>
+      </ul>
+      <div class="loading" :class='{hideLoading: show}'>
+        <img src="./static/images/loading.gif" alt="">
+      </div>
+    </main>
+    <div class="input-wrap" :class="{hideInput: !showInput}">
+      <label>Händler-Bestätigungscode eingeben:</label>
+      <div class="input">
+        <input v-model='merchantCode' placeholder="Bestätigungscode" @keyup.enter='submit' ref='input' type="text">
+        <button @click='submit' :disabled='!merchantCode'>Bestimmen</button>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="./data.js"></script> -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/screen.js"></script>
+</body>
+</html>

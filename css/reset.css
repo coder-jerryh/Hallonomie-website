@@ -1,0 +1,23 @@
+/* 字体 */
+@font-face {
+  font-family: OpenSans;
+  src: url("../static/font/OpenSans-CondensedBold.ttf");
+}
+/* reset样式 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

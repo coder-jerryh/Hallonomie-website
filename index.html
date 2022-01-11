@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+  <link rel="stylesheet" href="./css/pc.css" media="screen and (min-width: 500px)">
+  <link rel="stylesheet" href="./css/webApp.css" media="screen and (max-width: 500px)">
+  <title>Hallonomie</title>
+  <link rel="icon" href="./static/images/logo-mini.png" type="image/x-icon">
+  </head>
+<body>
+  <main class="homePage">
+    <!-- 导航 -->
+    <header>
+      <a class="logoName" href="./index.html">
+        <img src="./static/images/logo.png" alt="">
+        <h1>Hallonomie</h1>
+      </a>
+      <ul id="menu">
+        <!-- <li>
+          <a href="https://hallonomie.halloway.net/h5/static/pc.html#/">Lieferdienst</a>
+        </li> -->
+        <li>
+          <a href="#produkte">Produkte</a>
+        </li>
+        <li>
+          <a href="./pages/preise.html">Preise</a>
+        </li>
+        <li>
+          <a href="./pages/kontakt.html">Kontakt</a>
+        </li>
+        <li>
+          <a href="./pages/uberUns.html">Über Uns</a>
+        </li>
+        <li class="email">
+          <a href="mailto:info@hallonomie.com">Email: info@hallonomie.com</a>
+        </li>
+      </ul>
+      <img onclick="showMenu()" class="menuBtn" id='showMenu' src="./static/images/menu.png" alt="">
+      <img onclick="closeMenu()" class="menuBtn" id='closeMenu' src="./static/images/hide.png" alt="">
+    </header>
+    <!-- banner -->
+    <section class="banner">
+      <div class="info">
+        <article>
+          <h3>Hallonomie</h3>
+          <p>Vereinfachen und optimieren Sie den Bestell-, Produktions- und Ausgabeprozess</p>
+          <p>Bieten Sie Ihren Kunden köstliche Gerichte schnell und effizient</p>
+        </article>
+        <ul class="videos">
+          <li onclick="openVideo('qrCode')">
+            <img src="./static/images/play.jpg" alt="">
+            <p>Hallonomie QR-Code Digitale Speisekarte</p>
+            <i class="mask"></i>
+          </li>
+          <li onclick="openVideo('takeaway')">
+            <img src="./static/images/play.jpg" alt="">
+            <p>Hallonomie Außerhausbestellung Lösung</p>
+            <i class="mask"></i>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <i id='produkte'></i>
+    <!-- 介绍 -->
+    <section class="introduce turnDirection">
+      <article>
+        <h4>Digitale Speisekarte</h4>
+        <h5>- Intelligente Lösung</h5>
+        <p>Scannen einfach den QR-Code auf dem Tisch mit seiner Smartphone-Kamera</p>
+        <p>Die Tischnummer wird vom System automatisch erkannt</p>
+      </article>
+      <div class="pics">
+        <img src="./static/bg/1.jpg" alt="">
+      </div>
+    </section>
+    <section class="introduce">
+      <div class="pics">
+        <img src="./static/bg/2.jpg" alt="">
+      </div>
+      <article>
+        <h4>Mehrsprachenmenü</h4>
+        <p>Das Menü verfügt über verschiedene Sprachoptionen und passt sich automatisch der Smartphone Sprache an</p>
+        <p>Die Tischnummer wird vom System automatisch erkannt</p>
+      </article>
+    </section>
+    <section class="introduce turnDirection">
+      <article>
+        <h4>Kontaktdaten-Formula</h4>
+        <h5>(gemäß §2a Absatz 1 der CoronaSchVO)</h5>
+        <p>Für die Zeit der Corona-Pandemie gemäß §2a Absatz 1 der CoronaSchVO stellt Hallonomie ein elektronisches Kontaktdaten-Formular zur Verfügung.</p>
+        <p>Die Daten werden automatisch gesammelt und täglich an die angegebene E-Mailadresse gesendet.</p>
+      </article>
+      <div class="pics">
+        <img src="./static/bg/3.jpg" alt="">
+      </div>
+    </section>
+    <section class="introduce">
+      <div class="pics">
+        <img src="./static/bg/4.jpg" alt="">
+      </div>
+      <article>
+        <h4>Bestellbeleg automatisch ausgedruckt wird</h4>
+        <p>Die Bestelldaten werden gleichzeitig an die Rezeption und die hintere Küche übermittelt</p>
+        <p>Durch den automatisch gedruckten Bestellbeleg kann das Essen sofort zubereitet werden.</p>
+      </article>
+    </section>
+    <section class="introduce column">
+      <div class="pics">
+        <img src="./static/bg/5.jpg" alt="">
+      </div>
+      <article>
+        <h4>Bestellstatus aktualisiert</h4>
+        <p>Der Bestellstatus wird auch im Hintergrund in Echtzeit aktualisiert</p>
+      </article>
+    </section>
+    <section class="introduce turnDirection">
+      <article>
+        <h4>Außer Haus Bestellung</h4>
+        <p>Hallonomie stellt jedem Händler einen QR-Code für die Privatbestellung zur Verfügung, damit haben sie die Möglichkeit, auf verschiedenen Platformen zu werben</p>
+        <p>Nach dem Scannen des QR-Codes können Kunden sofort mit ihrer Außerhausbestellung beginnen</p>
+      </article>
+      <div class="pics">
+        <img src="./static/bg/6.jpg" alt="">
+      </div>
+    </section>
+    <section class="introduce">
+      <div class="pics">
+        <img src="./static/bg/7.jpg" alt="">
+      </div>
+      <article>
+        <h4>Lieferung optimieren</h4>
+        <p>Route zum Kunden schnell berechnet werden</p>
+        <p>Während des Lieferprozesses kontaktieren Kunden schnell und einfach über Hallonimie.</p>
+      </article>
+    </section>
+    <section class="introduce turnDirection">
+      <article>
+        <h4>Verwaltung</h4>
+        <h5>Intuitive und benutzerfreundliche</h5>
+        <p>Hallonomie bietet Ihnen auch eine intuitive und benutzerfreundliche Restaurantverwaltung</p>
+        <p>Menüinhalt, Bestandsverwaltung, Empfehlungen, Rabatte und Sonderangebote</p>
+        <p>Das alles können Sie schnell und einfach einstellen</p>
+      </article>
+      <div class="pics">
+        <img src="./static/bg/8.jpg" alt="">
+      </div>
+    </section>
+    <!-- 已入驻品牌 -->
+    <section class="brands">
+      <span>Unsere Kunden (in Deutschland)</span>
+      <img src="./static/bg/9.jpg" alt="">
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="top">
+        <span>FOLLOW US</span>
+        <a href="https://www.facebook.com/Hallonomie/"><img class="facebook" src="./static/images/facebook.png" alt=""></a>
+        <a href="https://www.youtube.com/channel/UCoQD9bEoIgJEk02K0P-S9UQ"><img class="youtube" src="./static/images/youtube.png" alt=""></a>
+        <a href="https://www.instagram.com/hallonomie/"><img class="instagram" src="./static/images/instagram.png" alt=""></a>
+      </div>
+      <div class="bottom">
+        <a href="./index.html">Hallonomie</a>
+        <a href="./pages/agb.html">AGB</a>
+        <a href="./pages/impressum.html">Impressum</a>
+        <a href="./pages/kontakt.html">Kontakt</a>
+        <!-- <div class="language">
+          <p>
+            <span>Deutsch (Germany)</span>
+            <img src="./static/images/bottom.png" alt="">
+          </p>
+        </div> -->
+      </div>
+    </footer>
+    <div class="iframe" id='iframe'>
+      <div class="wrap">
+        <img onclick="closeVideo()" class="close" src="./static/images/close.png" alt="">
+        <iframe frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+  <script src="./js/fiexible.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>

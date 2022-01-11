@@ -1,0 +1,504 @@
+@import '../css/reset.css';
+.homePage {
+  font-family: OpenSans;
+  background: #f6f6f6;
+  padding-top: 82px;
+}
+.homePage header {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 82px;
+  background: #003957;
+  padding: 0 22px 0 32px;
+  display: flex;
+  align-items: flex-end;
+  color: #ffd76f;
+}
+.homePage header .logoName {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 18px;
+}
+.homePage header .logoName:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+.homePage header .logoName img {
+  width: 28px;
+  height: 47px;
+  margin-right: 8px;
+}
+.homePage header .logoName h1 {
+  position: relative;
+  top: 5px;
+  font-size: 18px;
+}
+.homePage header ul {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  font-size: 16px;
+}
+.homePage header ul li a {
+  padding: 0 24px;
+  padding-bottom: 14px;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  /* 导航 */
+}
+.homePage header ul li a.selected {
+  text-decoration: underline;
+}
+.homePage header ul li.email {
+  margin-left: auto;
+}
+.homePage header ul li.email a {
+  padding-right: 0;
+}
+.homePage header .menuBtn {
+  display: none;
+}
+.homePage header a {
+  color: #ffd76f;
+  font-size: 16px;
+  padding-bottom: 14px;
+}
+.homePage header a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+.homePage section.detail {
+  font-weight: 600;
+  font-family: sans-serif;
+  background: #003957;
+  color: #ffd76f;
+  font-size: 16px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  cursor: default;
+}
+.homePage section.detail a {
+  color: #ffd76f;
+}
+.homePage section.detail p {
+  padding: 0 32px;
+  line-height: 1.6;
+}
+.homePage section.detail p.mb {
+  margin-bottom: 24px;
+}
+.homePage section.detail.normalText {
+  white-space: normal;
+  padding-bottom: 100px;
+}
+.homePage section.detail .videos {
+  word-spacing: normal;
+  display: flex;
+  padding: 0 32px;
+  margin-top: 60px;
+}
+.homePage section.detail .videos li {
+  font-size: 16px;
+  flex: 1;
+  cursor: pointer;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  height: 380px;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  transition: box-shadow ease 0.25s;
+}
+.homePage section.detail .videos li img {
+  width: 100%;
+  position: absolute;
+  width: 96px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.homePage section.detail .videos li:hover {
+  box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.3);
+}
+.homePage section.detail .videos li:first-child {
+  background-image: url('../static/bg/qrCode.png');
+  margin-right: 36px;
+}
+.homePage section.detail .videos li:last-child {
+  background-image: url('../static/bg/takeaway.png');
+}
+.homePage section.detail .videos li .mask {
+  display: inline-block;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.homePage section.detail .videos li p {
+  border-radius: 0 0 4px 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  font-size: 18px;
+  color: #003957;
+  line-height: 40px;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.homePage section.detail .prices {
+  display: flex;
+  padding: 0 32px;
+  margin-top: 40px;
+}
+.homePage section.detail .prices li {
+  height: 700px;
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 38px 0;
+  font-size: 24px;
+  color: #003957;
+  flex: 1;
+}
+.homePage section.detail .prices li h3 {
+  font-size: 24px;
+  font-weight: 600;
+  display: inline-block;
+}
+.homePage section.detail .prices li h3 + i {
+  margin-top: 18px;
+}
+.homePage section.detail .prices li > i {
+  font-size: 12px;
+  display: block;
+}
+.homePage section.detail .prices li .total {
+  margin-top: 18px;
+  margin-bottom: 0;
+  font-size: 36px;
+}
+.homePage section.detail .prices li .total i {
+  font-size: 16px;
+}
+.homePage section.detail .prices li .preisanfragen {
+  color: #08090c;
+  margin-top: 10px;
+}
+.homePage section.detail .prices li .content {
+  width: fit-content;
+  margin: 10px auto;
+}
+.homePage section.detail .prices li .content p {
+  width: fit-content;
+  font-size: 14px;
+  padding: 0;
+}
+.homePage section.detail .prices li .content p::before {
+  content: '+ ';
+}
+.homePage section.detail .prices li .content p.hide::before {
+  opacity: 0;
+}
+.homePage section.detail .prices li .pics {
+  margin: 0 auto;
+  text-align: center;
+}
+.homePage section.detail .prices li .pics img {
+  border-radius: 2px;
+  width: calc(100% - 88px);
+  margin: 0 44px;
+  height: 148px;
+}
+.homePage section.detail .prices li .pics img:last-child {
+  margin-top: 10px;
+}
+.homePage section.detail .prices li .pics.mini img {
+  width: calc(100% - 168px);
+  height: 106px;
+}
+.homePage section.detail .prices li:nth-child(2) {
+  margin: 0 40px;
+}
+.homePage section.detail .prices .tips {
+  margin-top: 18px;
+  font-size: 16px;
+}
+.homePage section.detail .prices .tips span {
+  font-weight: 600;
+  text-decoration: line-through;
+  padding: 0 20px;
+}
+.homePage section.detail .prices .tips .sale {
+  display: inline-block;
+  width: 160px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  background: #f75252;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.homePage section.banner {
+  width: 100%;
+  height: 738px;
+  background-image: url("../static/bg/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.homePage section.banner .info {
+  padding: 60px 65px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 32px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 8px;
+  display: flex;
+}
+.homePage section.banner .info article {
+  margin-right: 86px;
+  color: #003957;
+  width: 356px;
+}
+.homePage section.banner .info article h3 {
+  font-size: 55px;
+  margin-bottom: 30px;
+}
+.homePage section.banner .info article p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.homePage section.banner .info article p:first-of-type {
+  margin-bottom: 20px;
+}
+.homePage section.banner .info .videos li {
+  position: relative;
+  width: 220px;
+  height: 125px;
+  background-size: 100% 100%;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+  transition: box-shadow ease 0.25s;
+}
+.homePage section.banner .info .videos li:hover {
+  box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.3);
+}
+.homePage section.banner .info .videos li p {
+  border-radius: 0 0 4px 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  font-size: 12px;
+  color: #003957;
+  line-height: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+}
+.homePage section.banner .info .videos li .mask {
+  display: inline-block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.homePage section.banner .info .videos li:first-child {
+  background-image: url('../static/bg/qrCode.png');
+  margin-bottom: 46px;
+}
+.homePage section.banner .info .videos li:last-child {
+  background-image: url('../static/bg/takeaway.png');
+}
+.homePage section.banner .info .videos li img {
+  position: absolute;
+  width: 48px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.homePage section.introduce {
+  background: #fff;
+  margin-top: 25px;
+  padding: 40px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.homePage section.introduce.column {
+  flex-direction: column;
+  text-align: center;
+}
+.homePage section.introduce.column h4 {
+  margin-top: 20px;
+}
+.homePage section.introduce article {
+  margin: 0 10px;
+  color: #000;
+  position: relative;
+  z-index: 1;
+}
+.homePage section.introduce article h4 {
+  font-size: 36px;
+}
+.homePage section.introduce article h5 {
+  font-size: 24px;
+}
+.homePage section.introduce article p {
+  margin-top: 20px;
+  color: #888b8d;
+  font-size: 16px;
+  width: 424px;
+}
+.homePage section.introduce .pics {
+  margin: 0 10px;
+  width: fit-content;
+  width: 55%;
+}
+.homePage section.introduce .pics img {
+  width: 100%;
+}
+.homePage section.brands {
+  margin-top: 25px;
+  padding: 40px 60px;
+  background: #fff;
+}
+.homePage section.brands span {
+  font-size: 36px;
+  color: #000;
+  margin-left: 100px;
+}
+.homePage section.brands img {
+  margin-top: 30px;
+  width: 100%;
+}
+.homePage footer {
+  padding: 34px 10% 65px 10%;
+}
+.homePage footer .top {
+  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d7d7d7;
+}
+.homePage footer .top span {
+  color: #888b8d;
+  font-size: 16px;
+  margin-right: 20px;
+}
+.homePage footer .top img {
+  color: #848484;
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 2px;
+}
+.homePage footer .top img:hover {
+  opacity: 0.7;
+}
+.homePage footer .top img.youtube {
+  width: 18px;
+  height: 14px;
+}
+.homePage footer .bottom {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #545454;
+}
+.homePage footer .bottom span:first-of-type {
+  font-weight: 400;
+}
+.homePage footer .bottom a {
+  margin-right: 5%;
+  cursor: pointer;
+  color: #545454;
+}
+.homePage footer .bottom a:hover {
+  opacity: 0.7;
+}
+.homePage footer .bottom .language {
+  cursor: pointer;
+  margin-left: auto;
+}
+.homePage footer .bottom .language:hover {
+  opacity: 0.7;
+}
+.homePage footer .bottom .language span {
+  margin-right: 10px;
+}
+.homePage footer .bottom .language p img {
+  width: 18px;
+}
+.homePage #produkte {
+  display: block;
+  padding-top: 82px;
+  margin-top: -82px;
+}
+.homePage .iframe {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity ease 0.3s;
+}
+.homePage .iframe .wrap {
+  position: relative;
+  width: 75%;
+  height: 75%;
+}
+.homePage .iframe .wrap .close {
+  position: absolute;
+  top: 10px;
+  right: -40px;
+  width: 25px;
+  cursor: pointer;
+}
+.homePage .iframe .wrap .close:hover {
+  opacity: 0.5;
+}
+.homePage .iframe .wrap iframe {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 24px 14px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
